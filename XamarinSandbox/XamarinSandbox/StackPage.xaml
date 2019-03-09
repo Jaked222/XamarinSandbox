@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinSandbox.StackPage"
+             Padding="0, 20, 0, 0"
+             BackgroundColor="LightBlue">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20" Padding="10">
+            <Label Text="Welcome to Xamarin.Forms!" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="This is an explanation!" TextColor="White" FontSize="18" HorizontalOptions="Center" />
+            <Button Text="Login" BackgroundColor="PaleVioletRed" TextColor="White" />
+            <Button Text="Register" BackgroundColor="PaleVioletRed" TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
