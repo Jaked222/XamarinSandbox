@@ -12,6 +12,18 @@ namespace XamarinSandbox
         public MainPage()
         {
             InitializeComponent();
+
+            slider.Value = 0.5;
+
+            //if (Device.RuntimePlatform == Device.iOS)
+            //{
+            //    Padding = new Thickness(0, 20, 0, 0);
+            //} else if (Device.RuntimePlatform == Device.Android)
+            //{
+            //    Padding = new Thickness(0, 10, 0, 0);
+            //}
+
+            
         }
     }
 }

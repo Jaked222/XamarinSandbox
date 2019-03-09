@@ -3,12 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinSandbox"
              x:Class="XamarinSandbox.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <ContentPage.Padding>
+        <OnPlatform x:DataType="Thickness" iOS="0, 20, 0, 0" Android="0,500,0,0" />
+    </ContentPage.Padding>
+    <StackLayout BindingContext="{x:Reference slider}" HorizontalOptions="Center" VerticalOptions="Center" MinimumWidthRequest="500">
+        <BoxView Color="Green" Opacity="{Binding Value}" />
+        <Label Text="{Binding Value, StringFormat='Value is {0:F2}'}" Opacity="{Binding Value}" />
+        <Slider x:Name="slider" />
     </StackLayout>
 
 </ContentPage>
