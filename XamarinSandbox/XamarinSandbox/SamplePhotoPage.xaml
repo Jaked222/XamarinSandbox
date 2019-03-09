@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinSandbox.SamplePhotoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="20">
+                <Label Text="@jakedPhotos" HorizontalOptions="Start" />
+            </StackLayout>
+            <Image Source="http://lorempixel.com/1920/1080/nature/3/" />
+            <StackLayout Orientation="Horizontal" Spacing="20" Padding="10">
+                <Button Text="Like" />
+                <Button Text="Comment" />
+                <Button Text="Share" />
+            </StackLayout>
+            <StackLayout Padding="10">
+                <BoxView Color="#f0f0f0" HeightRequest="1" />
+                <Label Text="9001 likes" TextColor="Black" FontAttributes="Bold" />
+                <Label Text="I took this photo when I was hangin over in Norway" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
