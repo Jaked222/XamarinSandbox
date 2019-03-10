@@ -11,7 +11,7 @@ namespace XamarinSandbox
         {
             InitializeComponent();
 
-            MainPage = new ImagePage();
+            MainPage = new ListPage();
         }
 
         protected override void OnStart()
