@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinSandbox.ListPage">
     <ContentPage.Content>
-        <ListView x:Name="listView" HasUnevenRows="true">
+        <ListView x:Name="listView" 
+                  HasUnevenRows="true"
+                  IsGroupingEnabled="true"
+                  GroupDisplayBinding="{Binding Title}"
+                  GroupShortNameBinding="{Binding ShortTitle}"
+                  ItemTapped="Handle_ItemTapped"
+                  ItemSelected="Handle_ItemSelected"
+                  IsPullToRefreshEnabled="true"
+                  Refreshing="Handle_Refreshing">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}"/>
+                            <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="true" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
                         <StackLayout Orientation="Horizontal">
                             <Image Source="{Binding ImageUrl}" Aspect="AspectFit"/>
                             <StackLayout HorizontalOptions="StartAndExpand">
@@ -16,7 +28,6 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-            
         </ListView>
     </ContentPage.Content>
 </ContentPage>
